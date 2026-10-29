@@ -31,6 +31,7 @@ I also checked for missing days, outliers, inconsistent names, overlapping promo
 - **Dates and periods:** I treated start and end dates as inclusive, so a promotion from 17 to 23 Aug lasts 7 days. The "before" period has the same number of days and ends the day before the promotion starts, which keeps the comparison fair.
 - **When a promo is measured:** a promotion is only measured if every one of its games has data on every day of both periods. Otherwise I leave the uplift empty and the page shows the reason, instead of showing a number that could be misleading.
 - **Sanity check:** to see whether the uplift reflects the promotions and not a general trend, I applied the same calculation to the period just before each "before" window, where there is no promotion. The average there was +0.6%, against +24.5% for the real promotions.
+- **All games:** when a promotion says `ALL`, I used every game the site has in the data.
 
 ## What I would do with more time
 
@@ -43,4 +44,4 @@ I also checked for missing days, outliers, inconsistent names, overlapping promo
   
 ## AI tools
 
-I used Claude as an assistant. I used it to debug the CSV parsing, to debug and review my code and to get ideas for the design of the React page. Because of the short time, I also used it to generate better written text for the README and this file, since I only had plain-text drafts of both.
+I used Claude as a coding assistant to debug the CSV parsing, to help me write and review parts of the code, and to get ideas for the design of the React page. Because of the short time, I also used it to generate better written text for the README and this file, since I only had plain-text drafts of both.
